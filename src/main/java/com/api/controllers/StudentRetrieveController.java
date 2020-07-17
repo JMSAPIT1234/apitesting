@@ -11,8 +11,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.api.beans.Student;
-import com.api.beans.StudentRegistration;
-import com.api.beans.StudentRegistrationReply;
+
+
+
+
 
 @Controller
 public class StudentRetrieveController {
@@ -23,7 +25,7 @@ public class StudentRetrieveController {
 		
 		
 		System.out.println("In registerStudent");
-		List li = new ArrayList();
+		List<Student> li = new ArrayList<Student>();
         //StudentRegistrationReply stdregreply = new StudentRegistrationReply();           
         Student stdregreply = new Student();
         //StudentRegistration.getInstance().add(student);
@@ -57,10 +59,10 @@ public class StudentRetrieveController {
 	}
 	//@RequestMapping(method = RequestMethod.GET, value="/student/allstudent")
 	
-	@RequestMapping(value="/return400", method = RequestMethod.GET)
+	@RequestMapping(value="/delete/student", method = RequestMethod.GET)
 	@ResponseBody
-	public ResponseEntity sendViaResponseEntity() {
-	    return new ResponseEntity(HttpStatus.BAD_REQUEST);
+	public ResponseEntity<?> sendViaResponseEntity() {
+	    return new ResponseEntity<Object>(HttpStatus.OK);
 	}
 
 	//	public String sendViaResponseEntity() {
