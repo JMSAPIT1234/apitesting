@@ -62,7 +62,7 @@ public class StudentRetrieveController {
 	@RequestMapping(value="/delete/student", method = RequestMethod.GET)
 	@ResponseBody
 	public ResponseEntity<?> sendViaResponseEntity() {
-	    return new ResponseEntity<Object>(HttpStatus.OK);
+	    return new ResponseEntity<Object>(HttpStatus.BADREQUEST);
 	}
 
 	//	public String sendViaResponseEntity() {
