@@ -31,7 +31,7 @@
 		{
 			"name": "Delete Student Data",
 			"request": {
-				"method": "DELETE",
+				"method": "GET",
 				"header": [],
 				"url": {
 					"raw": "http://3.250.27.204:8443/apiJava8artifact-0.0.1-SNAPSHOT/delete/student",
