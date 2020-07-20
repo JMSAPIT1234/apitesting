@@ -22,7 +22,10 @@ public class Module2JunitTest {
          * or check junit5-README.md */
         String sauceUserName = System.getenv("SAUCE_USERNAME");
         String sauceAccessKey = System.getenv("SAUCE_ACCESS_KEY");
-        String sauceURL = "https://ondemand.saucelabs.com/wd/hub";
+     WebDriver driver = new RemoteWebDriver(
+            new URL("http://"+System.getenv("SAUCE_USERNAME")+":"+System.getenv("SAUCE_ACCESS_KEY")+"@ondemand.saucelabs.com:80/wd/hub",
+            desiredCapabilities);
+       
  
         /**
          * In this section, we will configure our test to run on some specific
