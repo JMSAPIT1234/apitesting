@@ -24,4 +24,10 @@ public class Student {
 	public void setRegistrationNumber(String registrationNumber) {
 		this.registrationNumber = registrationNumber;
 	}
+	
+	public int getSize(int a, int b, int c) {
+		int sum = 0;
+		sum = a + b + c;
+		return sum;
+	}
 }
